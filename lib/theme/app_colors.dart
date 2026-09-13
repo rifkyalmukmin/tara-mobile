@@ -47,7 +47,14 @@ abstract final class AppColors {
   static const Color recommendBg = Color(0xFFF0F1F2);
 
   /// Merah hasil klasifikasi penyakit.
-  static const Color diseaseRed = Color(0xFFD0392E);
+  static const Color diseaseRed = Color(0xFFB81414);
+
+  /// Latar kartu saran penanganan (hijau muda).
+  static const Color treatmentBg = Color(0xFFE6F4EC);
+
+  /// Latar area unggah foto dan warna border putus-putusnya.
+  static const Color uploadBg = Color(0xFFFAFBFA);
+  static const Color dashedBorder = Color(0xFFB9C4BE);
 
   /// Teks dan ikon di atas kartu CTA hijau.
   static const Color onGreenTitle = Color(0xFFE8F3EB);

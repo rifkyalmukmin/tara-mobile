@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
 import '../widgets/tara_bottom_nav.dart';
 import 'beranda_screen.dart';
+import 'deteksi_penyakit_screen.dart';
 import 'hasil_pengukuran_screen.dart';
 
 /// Shell utama aplikasi: header "Tara" bersama, konten per-tab
@@ -36,10 +37,12 @@ class _HomeShellState extends State<HomeShell> {
             const _Header(),
             Expanded(
               child: IndexedStack(
-                index: _selectedIndex.clamp(0, 2),
+                index: _selectedIndex,
                 children: const [
                   BerandaScreen(),
                   HasilPengukuranScreen(),
+                  DeteksiPenyakitScreen(),
+                  _PlaceholderBody(),
                   _PlaceholderBody(),
                 ],
               ),

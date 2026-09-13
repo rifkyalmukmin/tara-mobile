@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screens/beranda_screen.dart';
+import 'screens/home_shell.dart';
 import 'theme/app_colors.dart';
 
 void main() {
@@ -22,7 +22,7 @@ class TaraApp extends StatelessWidget {
         scaffoldBackgroundColor: AppColors.scaffoldBg,
         useMaterial3: true,
       ),
-      home: const BerandaScreen(),
+      home: const HomeShell(),
     );
   }
 }

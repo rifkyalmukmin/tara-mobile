@@ -31,6 +31,24 @@ abstract final class AppColors {
 
   static const Color divider = Color(0xFFECEEEF);
 
+  /// Track progress bar hasil pengukuran.
+  static const Color barTrack = Color(0xFFDCE0E0);
+
+  /// Olive gelap — aksen metrik Kelembapan.
+  static const Color oliveDark = Color(0xFF49541A);
+
+  /// Cokelat tanah — aksen metrik Suhu Tanah.
+  static const Color soilBrown = Color(0xFF74462C);
+
+  /// Peach — lingkaran ikon metrik Suhu Tanah.
+  static const Color peach = Color(0xFFF7C8A6);
+
+  /// Latar kartu rekomendasi.
+  static const Color recommendBg = Color(0xFFF0F1F2);
+
+  /// Merah hasil klasifikasi penyakit.
+  static const Color diseaseRed = Color(0xFFD0392E);
+
   /// Teks dan ikon di atas kartu CTA hijau.
   static const Color onGreenTitle = Color(0xFFE8F3EB);
   static const Color onGreenSubtitle = Color(0xFF9DC3AA);

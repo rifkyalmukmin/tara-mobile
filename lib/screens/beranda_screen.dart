@@ -4,92 +4,10 @@ import '../theme/app_colors.dart';
 import '../widgets/measurement_card.dart';
 import '../widgets/mulai_pengukuran_card.dart';
 import '../widgets/status_probe_card.dart';
-import '../widgets/tara_bottom_nav.dart';
 
-class BerandaScreen extends StatefulWidget {
+/// Konten layar "Beranda TaniBot" (ditanam di dalam HomeShell).
+class BerandaScreen extends StatelessWidget {
   const BerandaScreen({super.key});
-
-  @override
-  State<BerandaScreen> createState() => _BerandaScreenState();
-}
-
-class _BerandaScreenState extends State<BerandaScreen> {
-  int _selectedIndex = 0;
-
-  static const _navItems = [
-    TaraNavItem(icon: Icons.home_outlined, label: 'Beranda'),
-    TaraNavItem(icon: Icons.insert_chart_outlined, label: 'Hasil'),
-    TaraNavItem(icon: Icons.grass, label: 'Deteksi'),
-    TaraNavItem(icon: Icons.chat_outlined, label: 'Chat'),
-    TaraNavItem(icon: Icons.history, label: 'Riwayat'),
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.scaffoldBg,
-      body: SafeArea(
-        bottom: false,
-        child: Column(
-          children: [
-            const _Header(),
-            Expanded(
-              child: _selectedIndex == 0 ? const _BerandaBody() : const _PlaceholderBody(),
-            ),
-          ],
-        ),
-      ),
-      bottomNavigationBar: TaraBottomNav(
-        items: _navItems,
-        selectedIndex: _selectedIndex,
-        onTap: (index) => setState(() => _selectedIndex = index),
-      ),
-    );
-  }
-}
-
-class _Header extends StatelessWidget {
-  const _Header();
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: AppColors.headerBg,
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
-      child: Row(
-        children: [
-          // TODO: ganti dengan foto profil asli hasil ekspor dari Figma.
-          CircleAvatar(
-            radius: 20,
-            backgroundColor: AppColors.badgeBg,
-            child: Icon(Icons.person, size: 24, color: AppColors.darkGreen),
-          ),
-          const SizedBox(width: 12),
-          const Text(
-            'Tara',
-            style: TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.w700,
-              color: AppColors.darkGreen,
-            ),
-          ),
-          const Spacer(),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.notifications_none,
-              size: 26,
-              color: AppColors.darkGreen,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _BerandaBody extends StatelessWidget {
-  const _BerandaBody();
 
   @override
   Widget build(BuildContext context) {
@@ -150,25 +68,6 @@ class _BerandaBody extends StatelessWidget {
           ],
         ),
       ],
-    );
-  }
-}
-
-/// Penampung sementara untuk tab yang belum diimplementasikan.
-class _PlaceholderBody extends StatelessWidget {
-  const _PlaceholderBody();
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Segera hadir',
-        style: TextStyle(
-          fontSize: 16,
-          fontWeight: FontWeight.w600,
-          color: AppColors.textSecondary,
-        ),
-      ),
     );
   }
 }

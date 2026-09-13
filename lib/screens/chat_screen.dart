@@ -34,7 +34,7 @@ class _ChatScreenState extends State<ChatScreen> {
   List<_ChatMessage> _messages = const [
     _ChatMessage(
       text: 'Halo! Kondisi tanah di Wadah A saat ini sangat baik. '
-          'Berdasarkan data cuaca, diprediksi akan hujan sore ini. '
+          'Berdasarkan data cuaca, diperkirakan akan hujan sore ini. '
           'Ada yang bisa saya bantu terkait perawatan tanaman '
           'Anda hari ini?',
       time: '10:00',

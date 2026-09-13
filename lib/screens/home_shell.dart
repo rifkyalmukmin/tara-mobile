@@ -6,6 +6,7 @@ import 'beranda_screen.dart';
 import 'chat_screen.dart';
 import 'deteksi_penyakit_screen.dart';
 import 'hasil_pengukuran_screen.dart';
+import 'riwayat_screen.dart';
 
 /// Shell utama aplikasi: header "Tara" bersama, konten per-tab
 /// (IndexedStack agar state tiap tab tetap hidup), dan bottom navigation.
@@ -44,7 +45,7 @@ class _HomeShellState extends State<HomeShell> {
                   HasilPengukuranScreen(),
                   DeteksiPenyakitScreen(),
                   ChatScreen(),
-                  _PlaceholderBody(),
+                  RiwayatScreen(),
                 ],
               ),
             ),
@@ -95,25 +96,6 @@ class _Header extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-/// Penampung sementara untuk tab yang belum diimplementasikan.
-class _PlaceholderBody extends StatelessWidget {
-  const _PlaceholderBody();
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Segera hadir',
-        style: TextStyle(
-          fontSize: 16,
-          fontWeight: FontWeight.w600,
-          color: AppColors.textSecondary,
-        ),
       ),
     );
   }

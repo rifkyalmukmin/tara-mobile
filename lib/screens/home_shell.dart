@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
 import '../widgets/tara_bottom_nav.dart';
 import 'beranda_screen.dart';
+import 'chat_screen.dart';
 import 'deteksi_penyakit_screen.dart';
 import 'hasil_pengukuran_screen.dart';
 
@@ -42,7 +43,7 @@ class _HomeShellState extends State<HomeShell> {
                   BerandaScreen(),
                   HasilPengukuranScreen(),
                   DeteksiPenyakitScreen(),
-                  _PlaceholderBody(),
+                  ChatScreen(),
                   _PlaceholderBody(),
                 ],
               ),
